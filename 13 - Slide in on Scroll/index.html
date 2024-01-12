@@ -82,7 +82,7 @@
         // ref: https://javascript.info/size-and-scroll#geometry
         const imgBottom = img.offsetTop + img.clientHeight + img.clientTop;
         console.log(slideInAt, img.offsetTop);
-        const isHalfShown = slideInAt > img.offsetTop;
+        const isHalfShown = slideInAt > (img.offsetTop + img.clientTop);
         console.log(window.scrollY, imgBottom);
         const isNotScrolledPast = window.scrollY < imgBottom;
         console.log(isHalfShown, isNotScrolledPast);
